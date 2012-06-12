@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavascriptMadLibs</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="author" content="The Chopping Block, Inc." />
+	<meta name="geo.country" content="US" />
+	<meta name="dc.language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen" charset="utf-8" />
+	
+	<style type="text/css" media="screen">		
+		/*local styles if any (quick tests and local only overrides)*/
+	</style>
+</head>
+<body>
+
+	<div class="wrap" >
+		Project: JavascriptMadLibs
+<ul>		
+		<li>1) Place to enter words that will be in the story</li>
+		<li>2) Way to say "Make those words show up in the story"</li>
+		<li>3) Story</li>
+		
+</ul>	
+
+
+	<p>
+		Hello world! I'm a little <select name="word1" id="word1"> <option> cat </option> <option> dog </option> <option> bird </option> <option> fish </option> </select>
+ 
+		from the <input type="text" name="word2" value="" id="word2" title="adjective">	
+		city called<input type="text" name="word3" value="" id="word3" title="noun">	
+		full of	<input type="text" name="word4" value="" id="word4" title="adjective">	
+		things. I'm <input type="text" name="word5" value="" id="word5">	
+		years old, so
+	</p>
+	
+	
+	
+	<span onClick="makeStory();">Madlib</span>
+
+	
+	<div id="story"></div>
+
+</div>
+<script type="text/javascript" charset="utf-8">
+	
+	
+	var makeStory = function makeStory(){
+		
+		var word1 = document.getElementById('word1').value;
+		var word2 = document.getElementById('word2').value;
+		var word3 = document.getElementById('word3').value;
+		var word4 = document.getElementById('word4').value;
+		var word5 = document.getElementById('word5').value;
+		
+		if (word5 == 21) {
+			var word6 = 'you should register to vote';
+		}
+		if (word5 < 21) {
+			var word6 = 'you can not vote';
+		}
+		if (word5 > 21) {
+			var word6 = 'have you voted yet?';
+		}
+		
+		var story = "I'm a little" +" "+ word1 +" "+ "from the"+ " "+ word2 + " "+ "city called"+ " "+  word3 + " "+ "full of" +" "+  word4 +" "+ "things." + " "+ "I am" +" "+ word5 +" "+ "years old, so "+ word6;
+		
+		
+		
+		document.getElementById('story').innerHTML = story;
+		
+	}
+	
+	
+
+	
+	
+	
+</script>	
+</body>
+</html>
